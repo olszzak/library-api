@@ -76,6 +76,7 @@ def create_app() -> FastAPI:
     fastapi_app = FastAPI(
         title="Library API",
         docs_url="/swagger",
+        root_path=settings.ROOT_PATH
     )
     setup_routing(fastapi_app)
     setup_handlers(fastapi_app, debug=settings.DEBUG)
